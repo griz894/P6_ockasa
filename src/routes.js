@@ -1,10 +1,10 @@
 // routes.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'
-import Home from './pages/home'
-import About from './pages/about'
+import Home from './pages/Home'
+import About from './pages/About'
 import Error from './pages/404/'
-import FicheLogement from './pages/fiche-logement'
+import FicheLogement from './pages/Fiche-Logement'
 
 const AppRoutes = () => {
     return (
