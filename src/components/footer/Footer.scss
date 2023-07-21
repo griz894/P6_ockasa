@@ -1,0 +1,22 @@
+.footer {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding-top: 40px;
+    margin-top: auto;
+    position: sticky;
+    width: 100%;
+  }
+
+  img {
+    height: 50px;
+  }
+
+  h2 {
+    font-weight: 500;
+    color: #ffffff;
+  }
+}

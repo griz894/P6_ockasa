@@ -1,24 +1,31 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/'
-import About from './pages/About/'
-import Error from './pages/404/'
-import FicheLogement from './pages/Fiche-Logement/'
-import Header from './components/Header'
- 
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import AppRoutes from "./routes";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+    div {
+        font-family: 'Montserrat', sans-serif; 
+        background-color: #FFFFFF;
+        max-width: 1440px;
+        margin: auto;
+        // min-height: 100vh;
+    }
+`;
+
 ReactDOM.render(
-    <React.StrictMode>
-        <Router>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/About" element={<About />} />
-                <Route path="*" element={<Error />} />
-                <Route path="/Fiche-Logement/:idLogement" element={<FicheLogement />} />
-            </Routes>
-            <Home />
-        </Router>
-    </React.StrictMode>,
-document.getElementById('root')
-)
+  <React.StrictMode>
+    <>
+      <Router>
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </Router>
+      <GlobalStyle />
+    </>
+  </React.StrictMode>,
+  document.getElementById("root")
+);
