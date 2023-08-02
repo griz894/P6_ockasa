@@ -48,7 +48,7 @@ const FicheLogement = () => {
           <h3>{logement.host.name}</h3>
           <img src={logement.host.picture} alt={logement.host.name} />
         </div>
-      </div>
+
       <div className="tagRating">
         <div className="tag">{renderTags()}</div>
         <Rating rating={logement.rating} />
@@ -63,6 +63,7 @@ const FicheLogement = () => {
           <Collapse title="Équipements">{renderEquipments()}</Collapse>
         </div>
       </div>
+    </div>
     </div>
   );
 };

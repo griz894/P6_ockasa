@@ -45,30 +45,30 @@
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    background-color: blue;
   }
   
   &.collapse-transition-enter-active {
     opacity: 1;
     max-height: 600px;
     transition:  max-height 3s ease, opacity 3s ease;
-    // transition:  height 6s ease;
-    background-color: purple
   }
   
   
-  // .collapse-transition-exit {
-  //   // opacity: 1;
-  //   height: auto;
-  //   background-color: green;
-  // }
+  &.collapse-transition-exit {
+    opacity: 1;
+    max-height: 600px;
+  }
   
-  // .collapse-transition-exit-active {
-  //   // opacity: 0;
-  //   height: 0;
-  //   overflow: hidden;
-  //   transition:  height 3s;
-  //   background-color: orange;
-  // }
+  &.collapse-transition-exit-active {
+    opacity: 1;
+    max-height: 0;
+    overflow: hidden;
+    transition:  max-height 900ms ease, opacity 1s ease;
+  }
 }
 
+@media only screen and (max-width: 600px) {
+  .collapse-button {
+    width: 95%;
+  }
+}

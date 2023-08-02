@@ -10,7 +10,7 @@
 
 .logementWrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   color: rgba(255, 96, 96, 1);
   font-size: 18px;
@@ -24,7 +24,7 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 0;
-    width: 50%;
+    width: 100%;
 
     h2 {
       font-size: 36px;
@@ -43,7 +43,7 @@
     margin: 0;
     align-items: center;
     justify-content: flex-end;
-    width: 30%;
+    width: 100%;
 
     h3 {
       font-size: 18px;
@@ -52,9 +52,9 @@
     }
 
     img {
-      width: 30%;
-      // width: 64px;
-      // height: 64px;
+      // width: 30%;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
     }
   }
@@ -118,5 +118,37 @@
   .rating {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carouselContainer {
+    margin: 10px;
+    width: auto;
+  }
+  .logementWrapper {
+    margin: 10px;
+    width: auto;
+    .hostCard {
+      justify-content: space-between;
+    }
+  }
+  .tagRating {
+    margin: 10px;
+    width: auto;
+    align-items: center;
+  }
+  .collapseLogement {
+    margin: 10px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    .collapseDescription {
+      width: 95%;
+    }
+    .collapseEquipements {
+      width: 95%;
+    }
   }
 }

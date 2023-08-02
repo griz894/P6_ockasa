@@ -1,9 +1,3 @@
-// .header {
-//   background-color: #ffffff;
-//   font-family: Montserrat, sans-serif;
-//   color: #ff6060;
-//   display: flex;
-// }
 .header {
   max-width: 1240px;
   header {
@@ -11,26 +5,41 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
-    max-width: 1240px;
+    // max-width: 1240px;
   }
 
   img {
-    height: 50px;
+    height: 70px;
     margin-right: 20px;
   }
 
   nav {
     display: flex;
-    gap: 50px; 
+    gap: 50px;
     font-size: 24px;
     font-weight: 500;
 
     a {
       text-decoration: none;
-      color: #ff6060; 
+      color: #ff6060;
     }
     a:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    header {
+      padding: 0;
+      margin: 10px;
+    }
+    nav {
+      font-size: 12px;
+    }
+    img {
+      height: 50px;
     }
   }
 }

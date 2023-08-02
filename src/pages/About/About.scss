@@ -2,7 +2,7 @@
   align-items: center;
   // padding: 20px 50px;
   text-align: center;
-  margin: auto;
+  margin-bottom: auto;
 }
 
 .collapse-wrapper {
@@ -12,4 +12,15 @@
   }
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+      padding: 0;
+      margin: 10px;
+      height: 224px;
+  }
+  .collapse-wrapper {
+    margin: 10px;
+  }
 }
